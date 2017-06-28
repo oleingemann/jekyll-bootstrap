@@ -7,3 +7,7 @@ Functionality:
   - Blog
   - Documentation section (Two level structure)
   - Sticky footer
+
+ Demo: 
+
+ http://oleingemann.github.io/jekyll-bootstrap/
