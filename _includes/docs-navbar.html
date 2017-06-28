@@ -1,0 +1,14 @@
+<div id="sidebar" class="well sidebar-nav">
+    {% for item in site.data.docs-toc.toc %}
+    <h5>
+        <small><b>{{ item.title }}</b></small>
+    </h5>
+    <ul class="nav nav-pills nav-stacked">
+        {% for entry in item.subfolderitems %}
+        <li class="{% if entry.url == page.url %}active{% endif %}">
+            <a href="{{ entry.url }}">{{ entry.page }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</div>

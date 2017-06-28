@@ -1,0 +1,24 @@
+<div id="sidebar" class="well sidebar-nav">
+    <h5>
+        <small><b>Latest posts</b></small>
+    </h5>
+    <ul class="nav nav-pills nav-stacked">
+        {% for post in site.posts %}
+        <li class="{% if entry.url == post.url %}active{% endif %}">
+            <a href="{{ post.url }}"><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<h4>Tags</h4>
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+<span class="site-tag">
+    <a href="/tag/{{ tag | first | slugify }}/"
+       style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+        {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+    </a>
+</span>
+{% endfor %}

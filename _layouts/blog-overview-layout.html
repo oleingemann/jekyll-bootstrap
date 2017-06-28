@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+{% include header.html %}
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-md-8">
+            <div>
+                {% for post in site.posts %}
+                <h4><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4>
+                <span>{{ post.date | date_to_string }}</span> &raquo;
+                {{ post.content | strip_html | truncatewords:75}}<br>
+                <a href="{{ post.url }}">Read more...</a><br><br>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            {% include blog-navbar.html %}
+        </div>
+
+    </div>
+</div>
+
+{% include footer.html %}
+</body>
+
+</html>

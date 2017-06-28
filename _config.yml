@@ -21,6 +21,14 @@ blog:
 documentation:
   title: Documentation title
   url: /documentation
+collections:
+  docs:
+    general:
+      output: true
+    guide:
+      output: true
+sass:
+    sass_dir: _sass
 
 
 # Exclude from processing.
