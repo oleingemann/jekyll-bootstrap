@@ -5,7 +5,7 @@
     <ul class="nav nav-pills nav-stacked">
         {% for post in site.posts %}
         <li class="{% if entry.url == post.url %}active{% endif %}">
-            <a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}</a>
+            <a href="{{ post.url }}"><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
