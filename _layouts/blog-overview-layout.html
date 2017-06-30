@@ -8,18 +8,47 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-md-8">
-            <div>
-                {% for post in site.posts %}
-                <h4><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4>
-                <span>{{ post.date | date_to_string }}</span> &raquo;
-                {{ post.content | strip_html | truncatewords:75}}<br>
-                <a href="{{ post.url }}">Read more...</a><br><br>
-                {% endfor %}
+            <div class="catbloc" id="allposts">
+                <h2>All posts</h2>
+
+                <ul>
+                    {% for post in site.posts %}
+                    <li>
+                        <a href="{{ post.url }}">
+                            <time>{{ post.date | date: "%-d %B %Y" }}</time>
+                            {{ post.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
+            {% for category in site.categories %}
+            <div class="catbloc" id="{{ category | first | remove:' ' }}">
+                <h2>{{ category | first }}</h2>
+
+                <ul>
+                    {% for posts in category %}
+                    {% for post in posts %}
+                    {% if post.url %}
+                    <li>
+                        <a href="{{ post.url }}">
+                            <time>{{ post.date | date: "%-d %B %Y" }}</time>
+                            {{ post.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
         </div>
         <div class="col-sm-4 col-md-4">
             {% include blog-navbar.html %}
         </div>
+
+    </div>
+    <div class="row">
 
     </div>
 </div>

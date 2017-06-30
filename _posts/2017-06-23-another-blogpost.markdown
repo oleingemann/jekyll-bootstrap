@@ -2,8 +2,8 @@
 layout: blog-layout
 title:  "Another post with correct layout"
 date:   2017-06-25 20:11:32 +0200
-categories: jekyll
-tags: joda soda
+categories: jekyll ingemann
+tags: joda soda buda
 description: A small tale on how to tell stories.
 ---
 

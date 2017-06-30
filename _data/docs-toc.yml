@@ -2,12 +2,12 @@ toc:
   - title: General
     subfolderitems:
       - page: Get started
-        url: /docs/general/get-started
+        url: /docs/general/get-started/
       - page: How does it work?
-        url: /docs/general/how-does-it-work
+        url: /docs/general/how-does-it-work/
       - page: Minimum requirements
-        url: /docs/general/minimum-requirements
+        url: /docs/general/minimum-requirements/
   - title: Guides
     subfolderitems:
       - page: Guide
-        url: /docs/guide/guide
+        url: /docs/guide/guide/
