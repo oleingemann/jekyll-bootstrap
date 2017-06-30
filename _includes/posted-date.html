@@ -1,0 +1,6 @@
+{% assign months = "januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember" | split: "|" %}
+{% assign m = post.date | date: "%-m" | minus: 1 %}
+{% assign day = post.date | date: "%d" %}
+{% assign month = months[m] %}
+{% assign year = post.date | date: "%Y" %}
+<span class="date">{{ day }} {{ month }} {{ year }}</span>

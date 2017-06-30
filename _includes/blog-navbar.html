@@ -5,15 +5,16 @@
     <ul class="nav nav-pills nav-stacked">
         {% for post in site.posts %}
         <li class="{% if page.url == post.url %}active{% endif %}">
-            <a href="{{ post.url }}"><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}</a>
+            <a href="{{ post.url }}">
+                <!--Hard coded locale for months -->
+                    {% include posted-date.html %}
+                &raquo; {{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
 </div>
 
-
 <h4>Categories</h4>
-
 
 <nav>
     {% for category in site.categories %}

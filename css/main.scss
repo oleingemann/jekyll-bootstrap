@@ -1,7 +1,15 @@
 ---
 ---
+html {
+  overflow-y: scroll;
+}
+
 * {
   font-size:1em;
+}
+
+ul {
+  list-style-type: none;
 }
 
 li.active a {
@@ -9,8 +17,43 @@ li.active a {
   cursor: default;
 }
 
+.inline-headers h2, .inline-headers h4 {
+  margin-left:30px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.top-header{
+  margin-top:10px;
+  margin-bottom:20px;
+}
+
+header{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.header-left{
+  text-align:left;
+}
+
+.header-right{
+  text-align:right;
+}
+
+@media screen and (max-width: 800px) {
+  .header-left, .header-right {
+    text-align: center;
+  }
+}
+
+
 h5 {
   font-size:1.45em;
+}
+
+.catbloc:not(:target) {
+  display: none;
 }
 
 $height-footer: 60px;
@@ -32,4 +75,3 @@ html {
     }
   }
 }
-
