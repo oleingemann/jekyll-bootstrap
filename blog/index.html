@@ -3,3 +3,17 @@ layout: blog-overview-layout
 ---
 
         Lots of blogposts!
+
+
+    <h2>All posts</h2>
+
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">
+                <time>{{ post.date | date: "%-d %B %Y" }}</time>
+                {{ post.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>

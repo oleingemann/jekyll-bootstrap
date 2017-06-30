@@ -8,20 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-md-8">
-            <div class="catbloc" id="allposts">
-                <h2>All posts</h2>
-
-                <ul>
-                    {% for post in site.posts %}
-                    <li>
-                        <a href="{{ post.url }}">
-                            <time>{{ post.date | date: "%-d %B %Y" }}</time>
-                            {{ post.title }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {{ content }}
             {% for category in site.categories %}
             <div class="catbloc" id="{{ category | first | remove:' ' }}">
                 <h2>{{ category | first }}</h2>

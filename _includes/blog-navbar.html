@@ -16,8 +16,8 @@
 
 
 <nav>
-    <a href="{{ site.url }}#allposts">All posts</a>
     {% for category in site.categories %}
     <a href="/#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}.{% else %}, {% endif %}
     {% endfor %}
+    <a href="/blog">All posts</a>
 </nav>
