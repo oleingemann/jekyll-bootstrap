@@ -20,5 +20,5 @@
     {% for category in site.categories %}
     <a href="/blog/#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}.{% else %}, {% endif %}
     {% endfor %}
-    <a href="/blog">All posts</a>
+    <a href="/">All posts</a>
 </nav>
