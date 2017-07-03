@@ -1,5 +1,58 @@
+<hr>
 <div id="footer">
-    <div class="container">
-        <p class="footer-block">jekyll+bootstrap template by @oleingemann</p>
+<div class="container">
+    <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+                <h6><strong>Navigation</strong></h6>
+                <ul class="footer-list">
+                    <li><a href="#" src="#">Main page</a></li>
+                    <li><a href="#" src="#">Main page</a></li>
+                    <li><a href="#" src="#">Main page</a></li>
+                    <li><a href="#" src="#">Main page</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+                <h6><strong>Information</strong></h6>
+                <ul class="footer-list">
+                    <li><a href="#" src="#">Infopage 1</a></li>
+                    <li><a href="#" src="#">Infopage 2</a></li>
+                    <li><a href="#" src="#">Infopage 3</a></li>
+                    <li><a href="#" src="#">Infopage 4</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+                <h6><strong>About</strong></h6>
+                <ul class="footer-list">
+                    <li><a href="#" src="#">Infopage 1</a></li>
+                    <li><a href="#" src="#">Infopage 2</a></li>
+                    <li><a href="#" src="#">Infopage 3</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+                <h6><strong>Follow</strong</h6>
+                <ul class="footer-list">
+                    {% if site.github_username %}
+                    <li class="footer-list-social">
+                        {% include icon-github.html username=site.github_username %}
+                    </li>
+                    {% endif %}
+
+                    {% if site.twitter_username %}
+                    <li class="footer-list-social">
+                        {% include icon-twitter.html username=site.twitter_username %}
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
     </div>
+    <div class="row">
+            <h6 align="center" style="color:grey;">{{ site.title }}</h6>
+            <h6 align="center" style="color:grey;">{{ site.copyrights }}</h6>
+    </div>
+
 </div>
+</div>
+
+
+</div>
+
