@@ -9,6 +9,9 @@
         <div class="row">
             <div class="col-sm-8 col-md-8">
                 <h3> {{ page.title }} </h3>
+                <em style="color:grey;">
+                    {% include page-date.html %}
+                </em>
                 <hr/>
                 {{content}}
             </div>

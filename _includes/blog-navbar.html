@@ -7,7 +7,7 @@
         <li class="{% if page.url == post.url %}active{% endif %}">
             <a href="{{ post.url }}">
                 <!--Hard coded locale for months -->
-                    {% include posted-date.html %}
+                    {% include post-date.html %}
                 &raquo; {{ post.title }}</a>
         </li>
         {% endfor %}
@@ -18,7 +18,14 @@
 
 <nav>
     {% for category in site.categories %}
-    <a href="/blog/#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}.{% else %}, {% endif %}
+        <!--Removes the main folder to show up as category    -->
+        {% if category contains 'blog' %}
+        <!--Display everything else:-->
+            {% else %}
+                <a href="/blog/#{{ category | first | remove:' ' }}">
+                    <strong>{{ category | first }}</strong></a>{% if forloop.last %}.{% else %}, {% endif %}
+            {% endif %}
     {% endfor %}
+
     <a href="/">All posts</a>
 </nav>

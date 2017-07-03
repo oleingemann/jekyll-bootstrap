@@ -11,8 +11,8 @@
             {{ content }}
             {% for category in site.categories %}
             <div class="catbloc" id="{{ category | first | remove:' ' }}">
-                <h2>{{ category | first }}</h2>
-
+                <h3>{{ category | first }} - {{ site.lang.related-posts }}</h3>
+                <hr/>
                 <ul>
                     {% for posts in category %}
                     {% for post in posts %}

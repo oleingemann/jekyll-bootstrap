@@ -31,7 +31,13 @@ collections:
 sass:
     sass_dir: _sass
 
-
+lang:
+    latest-posts: Latest
+    read-more: Read more...
+    documentation: Documentation
+    blog: Blog
+    related-posts: related posts
+    welcome-to-docs: Welcome to the documentation central.
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -6,4 +6,3 @@ categories: ingemann
 ---
 
 This is really a short one.
-
