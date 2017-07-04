@@ -1,7 +1,37 @@
 ---
 ---
+
+
+$main-font:            'Lora', serif;
+$body-background-color:        white;
+$footer-background-color:    #e5e5e5;
+$navbar-background-color:  lightblue;
+
+$font-color:                     red;
+$link-color:                    blue;
+$link-hover-color:          darkblue;
+$active-background:            green;
+
+
 html {
   overflow-y: scroll;
+}
+
+body{
+  background-color:$body-background-color;
+  color:$font-color;
+  font-family: $main-font;
+}
+
+a {
+  color: $link-color;
+  &:hover {
+    color:$link-hover-color;
+  }
+}
+
+.well {
+  background-color:$navbar-background-color;
 }
 
 * {
@@ -15,6 +45,7 @@ ul {
 li.active a {
   color: red;
   cursor: default;
+  background-color:$active-background !important;
 }
 
 .inline-headers h2, .inline-headers h4 {
@@ -68,11 +99,18 @@ html {
     width: 100%;
     position: absolute;
     height: $height-footer;
-    background-color: #f5f5f5;
     .footer-block {
       margin: 20px 0;
     }
   }
+}
+
+#footer{
+  background-color:$footer-background-color;
+}
+
+.footer-container{
+  background-color:$footer-background-color;
 }
 
 ul.footer-list{
