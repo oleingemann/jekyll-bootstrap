@@ -28,9 +28,14 @@
                     <li><a href="#" src="#">Infopage 3</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                 <h6><strong>Follow</strong</h6>
                 <ul class="footer-list">
+                    {% if site.facebook_username %}
+                    <li class="footer-list-social">
+                        {% include icon-facebook.html username=site.github_username %}
+                    </li>
+                    {% endif %}
                     {% if site.github_username %}
                     <li class="footer-list-social">
                         {% include icon-github.html username=site.github_username %}

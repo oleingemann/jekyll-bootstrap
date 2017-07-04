@@ -1,0 +1,10 @@
+{% if page.url == "/docs/" %}
+
+{% else %}
+<p>
+<br/>
+{{ site.lang.docs-footer-message }}
+<a href="mailto:{{ site.lang.docs-footer-message-contact-email}}"
+>{{ site.lang.docs-footer-message-contact-message }}</a></p>
+
+{% endif %}

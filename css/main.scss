@@ -4,8 +4,11 @@
 
 $main-font:            'Lora', serif;
 $body-background-color:        white;
+$header-background-color:       pink;
 $footer-background-color:    #e5e5e5;
 $navbar-background-color:  lightblue;
+$navbar-border:    1px solid #e3e3e3;
+$navbar-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 
 $font-color:                     red;
 $link-color:                    blue;
@@ -21,6 +24,7 @@ body{
   background-color:$body-background-color;
   color:$font-color;
   font-family: $main-font;
+  font-size:1.6em;
 }
 
 a {
@@ -30,8 +34,14 @@ a {
   }
 }
 
+.header {
+  background-color: $header-background-color;
+}
+
 .well {
+  margin-top:10px;
   background-color:$navbar-background-color;
+  border: $navbar-background-color
 }
 
 * {
@@ -40,6 +50,10 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+h4.active{
+  text-decoration:underline;
 }
 
 li.active a {
