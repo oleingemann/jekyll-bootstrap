@@ -1,0 +1,8 @@
+<ul class="tag-list">
+    {%  for category in page.categories %}
+        {% if category != "blog" %}
+            <a href="/blog/#{{ category | remove : ' ' }}">
+            <li class="tag-list-item"><strong>{{ category }}</strong></li></a>
+        {% endif %}
+    {% endfor %}
+</ul>

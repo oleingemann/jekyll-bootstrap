@@ -19,15 +19,23 @@
 
 <h4>Categories</h4>
 <nav>
+    <ul class="tag-list">
+
         {% for category in site.categories %}
             <!--Removes the main folder to show up as category    -->
             {% if category contains 'blog' %}
             <!--Display everything else:-->
                 {% else %}
                     <a href="/blog/#{{ category | first | remove:' ' }}">
-                        <strong>{{ category | first }}</strong></a>{% if forloop.last %}.{% else %}, {% endif %}
+                        <li class="tag-list-item">
+
+                        <strong>{{ category | first }}</strong></a>{% if forloop.last %}.{% else %} {% endif %}
                 {% endif %}
         {% endfor %}
-        <a href="/">All posts</a>
-    </nav>
+                        </li>
+
+
+                <a href="/"><li class="tag-list-item">All posts</li></a>
+    </ul>
+   </nav>
 </div>

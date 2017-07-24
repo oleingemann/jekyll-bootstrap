@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
 copyrights: Copyrights 2017 - Your awesome company
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+twitter_username: oleingemann
 github_username:  jekyll
 facebook_username: jekyll-rb
 facebook_link: /skolehuset

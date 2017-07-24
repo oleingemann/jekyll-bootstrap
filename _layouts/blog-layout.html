@@ -5,6 +5,8 @@
 {% include header.html %}
 
 <body>
+    {% include facebook-follow-snippet.html %}
+    {% include twitter-follow-snippet.html %}
     <div class="container">
         <div class="row">
             <div class="col-sm-8 col-md-8">
@@ -12,8 +14,10 @@
                 <em style="color:grey;">
                     {% include page-date.html %}
                 </em>
+                    {% include blogpost-tags.html %}
                 <hr/>
                 {{content}}
+                {% include blogpost-footer.html %}
             </div>
             <div class="col-sm-4 col-md-4">
                 {% include blog-navbar.html %}

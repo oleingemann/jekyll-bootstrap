@@ -1,20 +1,18 @@
 ---
 ---
 
-
 $main-font:            'Lora', serif;
 $body-background-color:        white;
-$header-background-color:       pink;
+$header-background-color: #e6e6e6;
 $footer-background-color:    #e5e5e5;
-$navbar-background-color:  lightblue;
+$navbar-background-color: #7de6dd;
 $navbar-border:    1px solid #e3e3e3;
 $navbar-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 
-$font-color:                     red;
-$link-color:                    blue;
-$link-hover-color:          darkblue;
+$font-color: #3d3d3d;
+$link-color: #1a1b22;
+$link-hover-color: #9e9e9e;
 $active-background:            green;
-
 
 html {
   overflow-y: scroll;
@@ -37,6 +35,8 @@ a {
 .header {
   background-color: $header-background-color;
 }
+
+img.main-logo{height:50px;}
 
 .well {
   margin-top:10px;
@@ -117,6 +117,26 @@ html {
       margin: 20px 0;
     }
   }
+}
+
+.padding-less {
+  padding:0;
+}
+
+ul.tag-list{
+  display:block;
+  padding:8px 0px;
+}
+
+li.tag-list-item{
+  margin-right:5px;
+  margin-bottom:6px;
+  display:inline-block;
+  font-size:0.75em;
+  color:grey;
+  border-radius:6px;
+  padding:4px;
+  background-color:$header-background-color
 }
 
 #footer{
