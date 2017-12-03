@@ -12,7 +12,7 @@ $navbar-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 $font-color: #3d3d3d;
 $link-color: #1a1b22;
 $link-hover-color: #9e9e9e;
-$active-background:            green;
+$active-background:green;
 
 html {
   overflow-y: scroll;
@@ -156,4 +156,24 @@ li.footer-list-social{
   font-size:20px;
 }
 
+//Mailchimp stuff
 
+#mc_embed_signup{
+  clear:left;
+  font:14px;
+  width:325px;
+}
+
+#mc_embed_signup .button{
+  background-color:$active-background !important;
+  width:302px !important;
+  height:40px !important;
+  &:hover{
+    opacity:0.8 !important;
+  }
+}
+
+.mce_inline_error {
+  border:1px solid lightgrey!important;
+  color:grey !important;
+}
